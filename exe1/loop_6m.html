@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>adsfghhhvv</h1>
+    <script>
+      let max_num = Number.MIN_SAFE_INTEGER;
+      let min_num = Number.MAX_SAFE_INTEGER;
+      let counter = 1;
+      while (counter <= 5) {
+        let num = parseInt(prompt('enter num to check: '));
+        if (num > max_num) max_num = num;
+        if (num < min_num) min_num = num;
+        counter++;
+      }
+      console.log('min num: ', min_num + ' max num: ' + max_num);
+    </script>
+  </body>
+</html>

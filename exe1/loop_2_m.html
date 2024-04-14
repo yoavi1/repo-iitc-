@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <script>
+      // loop_2_m	מבני בקרה - לולאות while	כתוב תכנית שקולטת 5 מספרים מהמשתמש, מחשבת סכום וממוצע ומדפיסה למסך את הערכים שלהם. בצע בעזרת לולאה
+
+      let sum = 0;
+      let averge = 0;
+      let counter = 1;
+      while (counter <= 5) {
+        let number_user = parseInt(prompt('enter number'));
+        sum += number_user;
+        counter = counter + 1;
+      }
+
+      console.log('sum = ', sum);
+      averge = sum / 5;
+      console.log('averge = ', averge);
+    </script>
+  </body>
+</html>

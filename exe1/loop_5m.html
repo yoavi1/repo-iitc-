@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>asd</h1>
+    <script>
+      // כתוב תוכנית שמקבלת מהמשתמש מספר שלם ומחשבת עצרת. לדוגמא עבור 4 נקבל : 1*2*3*4 ז"א 24
+      let user_num = prompt('enter number:');
+      let counter = 1;
+      let sum = 1;
+      while (counter <= user_num) {
+        sum *= counter;
+        counter++;
+      }
+      console.log(sum);
+    </script>
+  </body>
+</html>
