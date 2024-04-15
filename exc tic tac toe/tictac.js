@@ -1,3 +1,4 @@
+
 // let player1 = 'yoav';
 // let player2 = 'david';
 // let boardDimention;
@@ -9,12 +10,13 @@
 
 let player1 = 'yoav';
 let player2 = 'david';
-// let boardDimention;
+let boardDimention;
 let board = [];
 let emptyPlace = '-';
 let turn = player1;
 let correntWinner;
 let winnerStatistics = [];
+
 
 function getNames() {
   player1 = prompt('player1 enter name:');
@@ -109,10 +111,10 @@ function diagonalFromUpLeft() {
 function diagonalBottomLeftToTopRight() {
   for (
     let row = board.length - 1, colume = 0;
-    row >= 0 && colume <= board.length - 1;
+    row >= 0 ;
     row--, colume++
   ) {
-    if (board[board.length - 1][0] != board[row][colume]) {
+    if (board[board.length - 1][0] !== board[row][colume]) {
       return false;
     }
   }
@@ -120,25 +122,39 @@ function diagonalBottomLeftToTopRight() {
 }
 
 function checkwin() {
-  return checkRowsWin();
-  // checkColumesWin()
-  // diagonalFromUpLeft() ||
-  // diagonalBottomLeftToTopRight()
+  return checkRowsWin()||
+  checkColumesWin()||
+  diagonalFromUpLeft() ||
+  diagonalBottomLeftToTopRight()
 }
+
+function turnChanger(){
+  turn = turn === player1 ? player2: player1;
+}
+
+
 
 function main() {
+  // getNames();
+  // getDimantion();
+  // creatBoard(boardDimention);
+
+  // 
   creatBoard(3);
   printBoard();
-
-  while (!checkwin()) {
-    getPlaceToMove();
-    printBoard();
-    if (checkwin() == true) {
-      break;
-    }
-    turn = turn === player1 ? player2 : player1;
-  }
-  console.log('the winner is: ' + turn);
+  while(!checkwin()){
+  getPlaceToMove();
+  printBoard();
+  turnChanger()
+  
 }
+console.log("game end");
 
+}
 main();
+
+
+
+
+// validation for players input --> only numbers, number between 0-board.lenth-1
+// make function that check if drow.
