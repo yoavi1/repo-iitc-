@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="calculator">
+      <div id="displayDiv">
+        <button onclick="clearDisplay()">CE</button>
+        <p id="display">0</p>
+      </div>
+      <div id="leftSide">
+        <button onclick="enterNum(7)">7</button>
+        <button onclick="enterNum(8)">8</button>
+        <button onclick="enterNum(9)">9</button>
+        <button onclick="enterNum(4)">4</button>
+        <button onclick="enterNum(5)">5</button>
+        <button onclick="enterNum(6)">6</button>
+        <button onclick="enterNum(1)">1</button>
+        <button onclick="enterNum(2)">2</button>
+        <button onclick="enterNum(3)">3</button>
+        <button onclick="enterNum(0)">0</button>
+        <button onclick="enterNum('.')">.</button>
+        <button onclick="calculate()">=</button>
+      </div>
+      <div id="rightSide">
+        <button onclick="enterOperation('/')">/</button>
+        <button onclick="enterOperation('*')">*</button>
+        <button onclick="enterOperation('-')">-</button>
+        <button onclick="enterOperation('+')">+</button>
+      </div>
+    </div>
+    <script>
+      const elemDisplay = document.querySelector('#display');
+      let stringNumber1 = '';
+      let stringNumber2 = '';
+      let operation = '';
+      let correntNum = 1; // change between num one and num two
+      let isFirstDigit = true;
+
+      function clearDisplay() {
+        elemDisplay.innerText = '0';
+        stringNumber1 = '';
+        stringNumber2 = '';
+        operation = '';
+        isFirstDigit = true;
+        correntNum = 1;
+      }
+      //   between 1 to 10 you can use point
+
+      function enterNum(number) {
+        if (isFirstDigit == true) {
+          elemDisplay.innerText = '';
+          elemDisplay.innerText += number;
+          isFirstDigit = false;
+        } else {
+          elemDisplay.innerText += number;
+        }
+      }
+      // when the user enter =
+      function calculate() {
+        // if (correntNum == 2) {
+        stringNumber2 = elemDisplay.innerText;
+        // }
+        // if (correntNum == 1) {
+        //   stringNumber1 = elemDisplay.innerText;
+        // }
+        let result;
+        let number1 = Number(stringNumber1),
+          number2 = Number(stringNumber2);
+        if (operation == '/') {
+          result = number1 / number2;
+        }
+
+        if (operation == '*') {
+          result = number1 * number2;
+        }
+
+        if (operation == '-') {
+          result = number1 - number2;
+        }
+
+        if (operation == '+') {
+          result = number1 + number2;
+        }
+
+        elemDisplay.innerText = result;
+      }
+
+      //   /, *, -, +
+      function enterOperation(operationFromUser) {
+        operation = operationFromUser;
+        isFirstDigit = true;
+        stringNumber1 = elemDisplay.innerText;
+      }
+    </script>
+  </body>
+</html>
