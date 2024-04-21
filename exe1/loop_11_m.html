@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const start = Date.now();
+      let secretNumber = Math.floor(Math.random() * 100);
+      alert(secretNumber);
+      console.log(secretNumber);
+      let countOfTrys = 0;
+      let isRightNumber = false;
+
+      while (isRightNumber == false) {
+        countOfTrys++;
+        let userNumber = parseInt(prompt('enter number:'));
+        if (userNumber == secretNumber) {
+          const end = Date.now();
+          alert(
+            `you winn!!! after only ${countOfTrys} tryses and in only ${
+              end - start
+            } ms`
+          );
+          isRightNumber = true;
+        } else if (userNumber > secretNumber) {
+          alert('choose lower number');
+        } else if (userNumber < secretNumber) {
+          alert('choose bigger number');
+        }
+      }
+    </script>
+  </body>
+</html>
