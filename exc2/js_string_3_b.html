@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text = 'name:nathan , family:krasney , city:haifa';
+      //   console.log(text.trim());
+      //   console.log(text);
+      //   console.log(array);
+
+      function getBiggerStringValue(string) {
+        let longestValueString = 0;
+        let array = string.split(',');
+        array.forEach((element, index, array) => {
+          let correntLenghe =
+            array[index].trim().length - (array[index].trim().indexOf(':') + 1);
+          if (correntLenghe > longestValueString) {
+            longestValueString = correntLenghe;
+          }
+        });
+        return longestValueString;
+      }
+
+      console.log(
+        getBiggerStringValue('name:nathan , family:krasney , city:haifa')
+      );
+    </script>
+  </body>
+</html>

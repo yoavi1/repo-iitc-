@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [];
+      let sum = 0;
+      for (let indexNum = 0; indexNum < 5; indexNum++) {
+        array.push(Math.floor(Math.random() * 100));
+        sum += array.at(indexNum);
+      }
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+      console.log('sum= ' + sum + '/n avarge = ' + sum / 5);
+    </script>
+  </body>
+</html>

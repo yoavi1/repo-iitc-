@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array = [1, 4, 6, 77];
+
+      function findArrayNumber(numToFind) {
+        for (let indexNumber = 0; indexNumber < array.length; indexNumber++) {
+          if (numToFind == array.at(indexNumber)) {
+            return true;
+          }
+        }
+        return false;
+      }
+      console.log(findArrayNumber(78));
+    </script>
+  </body>
+</html>
