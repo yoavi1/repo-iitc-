@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 0
+      const book1 = { name: 'book1', pages: 10 };
+      const book2 = { name: 'book2', pages: 15 };
+      const book3 = { name: 'book3', pages: 20 };
+      const book4 = { name: 'book4', pages: 30 };
+      const book5 = { name: 'book5', pages: 22 };
+      let booksarray1 = [book1, book2, book3, book4, book5];
+
+      function displayBooks() {
+        booksarray1.forEach((element) => {
+          console.log(`name: ${element.name} pages: ${element.pages}`);
+        });
+      }
+
+      // 1
+      function addBook(booksArray, bookName, bookPages) {
+        booksArray.push({
+          name: bookName,
+          pages: bookPages,
+        });
+      }
+      addBook(booksarray1, 'david', 44);
+      addBook(booksarray1, 'david1', 49);
+      displayBooks();
+
+      // 2
+      function getBook(booksArray, bookName) {
+        let bookFind = null;
+        for (const book of booksArray) {
+          if (book.name == bookName) {
+            bookFind = book;
+          }
+        }
+        return bookFind;
+      }
+
+      // getBook(booksarray1, 'david');
+      console.log(getBook(booksarray1, 'david').pages);
+      // console.log(getBook(booksarray1, 'david').name);
+      // console.log(getBook(booksarray1, 'david').pages);
+      // getBook(booksarray1, 'a');
+
+      //3
+      function deleteBook(booksArray, bookName) {
+        let indexToDel = booksArray.findIndex(isBookIn);
+        function isBookIn(book) {
+          return book.name == bookName;
+        }
+        console.log(indexToDel);
+        booksArray.splice(indexToDel, 1);
+      }
+      displayBooks();
+      deleteBook(booksarray1, 'david');
+      displayBooks();
+      deleteBook(booksarray1, 'book2');
+      displayBooks();
+    </script>
+  </body>
+</html>
