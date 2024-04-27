@@ -14,7 +14,7 @@
         <input id="playerName" type="text" placeholder="enter name please" />
         <button onclick="startGame()" id="submitName">submit</button>
       </div>
-      <div class="gamePage">
+      <div style="display: none" class="gamePage">
         <h2>Rules</h2>
         <p>
           Discover the hidden code! Click, or use arrow keys, to change your
@@ -69,8 +69,6 @@
               </button>
             </td>
             <td><button onclick="calculateBullsAndCows()">go</button></td>
-          </td>
-          <td id="duplicateAlert" style="display: none;">duplicate! try again</td>
           </tr>
         </table>
       </div>
