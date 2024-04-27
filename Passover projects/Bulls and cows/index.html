@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="bullsAndCowsGame">
+      <div class="startPage">
+        <h1>welcom to bulse and cows game!</h1>
+        <label for="playerName">please enter your name:</label>
+        <input id="playerName" type="text" placeholder="enter name please" />
+        <button onclick="startGame()" id="submitName">submit</button>
+      </div>
+      <div class="gamePage">
+        <h2>Rules</h2>
+        <p>
+          Discover the hidden code! Click, or use arrow keys, to change your
+          guess in each box. (Bulls and Cows is similar to, but came before, the
+          board game MastermindTM*) Bulls = correct code, correct position. Cows
+          = correct code, wrong position.
+        </p>
+        <table id="guessesTable">
+          <tr>
+            <th><button>?</button></th>
+            <th><button>?</button></th>
+            <th><button>?</button></th>
+            <th><button>?</button></th>
+            <th>bulls</th>
+            <th>cows</th>
+          </tr>
+          <tr>
+            <td>
+              <button
+                class="btnNumbers"
+                id="btn1"
+                onclick="changeNumber('btn1')"
+              >
+                0
+              </button>
+            </td>
+            <td>
+              <button
+                class="btnNumbers"
+                id="btn2"
+                onclick="changeNumber('btn2')"
+              >
+                1
+              </button>
+            </td>
+            <td>
+              <button
+                class="btnNumbers"
+                id="btn3"
+                onclick="changeNumber('btn3')"
+              >
+                2
+              </button>
+            </td>
+            <td>
+              <button
+                class="btnNumbers"
+                id="btn4"
+                onclick="changeNumber('btn4')"
+              >
+                3
+              </button>
+            </td>
+            <td><button onclick="calculateBullsAndCows()">go</button></td>
+          </td>
+          <td id="duplicateAlert" style="display: none;">duplicate! try again</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
