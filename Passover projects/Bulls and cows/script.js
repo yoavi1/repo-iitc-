@@ -10,6 +10,7 @@ const historyGames = [];
 
 function getPlayerName() {
   playerName = document.querySelector('#playerName').value;
+  console.log(`player name: ${playerName}`);
 }
 
 function restGameOption() {
@@ -192,44 +193,12 @@ function calculateBullsAndCows() {
       const victuryHedear = document.createElement('h1');
       victuryHedear.setAttribute('id', 'victuryHedear');
       victuryHedear.innerText += `congratulation ${playerName} you win the game after only ${trys} trys`;
-      document.querySelector('body').appendChild(victuryHedear);
+      document.querySelector('.bullsAndCowsGame').appendChild(victuryHedear);
       const restGameButton = document.createElement('button');
       restGameButton.setAttribute('id', 'restGameButton');
-      document.querySelector('body').appendChild(restGameButton);
-      restGameButton.value = 'reset game';
+      document.querySelector('.bullsAndCowsGame').appendChild(restGameButton);
+      restGameButton.innerText = 'reset game';
       restGameButton.addEventListener('click', restGameOption);
     }
   }
 }
-
-// findBulls
-// findCows
-//is win
-
-// function findBulls(array) {
-//     numBulls=0;
-//     for (i = 0; i < 4; i++) {
-//       for (j = 0; j < 4; j++) {
-//         if (i == j) {
-//           continue;
-//         } else if(parseInt(array[i]) == (parseInt(array[j]))) {
-//           numBulls++;
-//         }
-//       }
-//     }
-//     return numBulls;
-//   }
-
-//     function addTableRow(){
-
-//     }
-
-// function calculateBullsAndCows(){
-
-// }
-// function isWin(){
-
-// }
-// function isDuplicate(){
-
-// }
