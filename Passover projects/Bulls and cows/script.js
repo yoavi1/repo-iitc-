@@ -6,7 +6,7 @@ const guessesTable = document.querySelector('#guessesTable');
 let bulls;
 let cows;
 // history use object
-const historyGames = [];
+// const historyGames = [];
 
 function getPlayerName() {
   playerName = document.querySelector('#playerName').value;
