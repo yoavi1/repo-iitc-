@@ -1,0 +1,78 @@
+@import url(reset.css);
+
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(263, 63%, 15%);
+  height: 50px;
+}
+
+.nav-bar > a {
+  color: white;
+  margin-left: 5px;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(250, 50%, 58%);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+#rob-first-image {
+  max-width: 400px;
+  border-radius: 50%;
+  margin: auto;
+}
+#introduction-header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  max-width: 1250px;
+  margin: auto;
+  padding: 100px;
+}
+
+.about-me-horizontal {
+  display: flex;
+}
+
+#about-me-header {
+  text-align: center;
+}
+
+.about-me-horizontal p {
+  width: 400px;
+  height: 450px;
+}
+
+.about-me-horizontal img {
+  width: 400px;
+  height: 450px;
+}
+
+.Projects {
+  display: flex;
+  flex-direction: column;
+}
+.Projects h2 {
+  align-self: center;
+}
+
+.progectsHorizental {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.progectsHorizental img {
+  width: 400px;
+}

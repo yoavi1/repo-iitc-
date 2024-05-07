@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="increment()">Increment</button>
+    <p></p>
+    <script>
+      const KEY = 'count-key';
+      const counterFromStorage = localStorage.getItem(KEY);
+      let count = counterFromStorage == null ? 0 : Number(counterFromStorage);
+
+      function increment() {
+        count++;
+        localStorage.setItem(KEY, count);
+        document.querySelector('p').innerText = count;
+      }
+    </script>
+  </body>
+</html>

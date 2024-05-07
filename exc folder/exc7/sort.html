@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arrayNumbers = [10, 5, 2, 7, 1];
+
+      function computMin(array, indexToStart) {
+        let minNumIndex = indexToStart;
+        for (let i = indexToStart; i < array.length; i++) {
+          if (array[i] < array[minNumIndex]) {
+            minNumIndex = i;
+          }
+        }
+        return minNumIndex;
+      }
+
+      function swich(array, currentIndex, minIndex) {
+        let temp = array[currentIndex];
+        array[currentIndex] = array[minIndex];
+        array[minIndex] = temp;
+      }
+
+      function sort(array) {
+        for (let i = 0; i < array.length; i++) {
+          let minNumIndex = computMin(array, i);
+          swich(array, i, minNumIndex);
+        }
+      }
+      //   console.log(arrayNumbers);
+      sort(arrayNumbers);
+      console.log(arrayNumbers);
+      //   console.log(arrayNumbers);
+    </script>
+  </body>
+</html>

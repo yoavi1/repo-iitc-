@@ -15,12 +15,14 @@
       </div>
       <div class="main-content">
         <div>
-          <img src="imges/rob.jpeg" alt="" />
-          <h1>Hi! I'm Rob! I teach people how to code and make websites.</h1>
+          <img id="rob-first-image" src="imges/rob.jpeg" alt="" />
+          <h2 id="introduction-header">
+            Hi! I'm Rob! I teach people how to code and make websites.
+          </h2>
         </div>
         <div class="aboutme">
-          <h1>about me</h1>
-          <div>
+          <h1 id="about-me-header">about me</h1>
+          <div class="about-me-horizontal">
             <img src="imges/rob-aboutme.jpeg" alt="" />
             <p>
               Almost a decade ago I was busy teaching math to teenagers at three
@@ -38,15 +40,29 @@
           </div>
         </div>
         <div class="Projects">
-          <div class="earth"><img src="imges/earth.jpeg" alt="" /></div>
-          <div class="bbc-project"><img src="imges/bbcnews.png" alt="" /></div>
+          <h2>projects</h2>
+          <div class="progectsHorizental">
+            <div class="earth"><img src="imges/earth.jpeg" alt="" /></div>
+            <div class="bbc-project">
+              <img src="imges/bbcnews.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-      <div id="footer">
-        <h1>contact</h1>
-        <p>Use this form to get in touch. I would love to hear from you!</p>
-        <div class="contact-forms-input"></div>
+      <h1>contact</h1>
+      <p>Use this form to get in touch. I would love to hear from you!</p>
+      <div class="contact-forms-input">
+        <div class="left-contact">
+          <input type="text" placeholder="Yourname" />
+          <input type="text" placeholder="Reason for your message"" />
+          <input type="text" placeholder="Your email address" />
+        </div>
+        <div class="right-contact">
+          <input type="text" placeholder="Your message" />
+          <button id="contact-submit-button">submit</button>
+        </div>
       </div>
+      <div id="footer"></div>
     </div>
   </body>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="taskInput">enter new task</label>
+    <input id="taskInput" type="text" placeholder="please enter new task" />
+    <button onclick="addTaskToLs()">add task</button>
+    <button onclick="showTasksToLs()">show tasks</button>
+    <button onclick="clearTasksFromLs()">clear tasks</button>
+    <ol></ol>
+
+    <script>
+      const order = document.querySelector('ol');
+
+      let arrayOfTask = JSON.parse(localStorage.getItem('myJasonArrayOfTask'));
+
+      if (localStorage.getItem('myJasonArrayOfTask') == null) {
+        const newArrayOfTasks = [];
+        let myJasonArrayOfTask = JSON.stringify(newArrayOfTasks);
+        localStorage.setItem('myJasonArrayOfTask', myJasonArrayOfTask);
+        arrayOfTask = JSON.parse(localStorage.getItem('myJasonArrayOfTask'));
+
+        //test
+        console.log(
+          `test new array in storage: ${localStorage.getItem(
+            'myJasonArrayOfTask'
+          )}`
+        );
+      }
+      function addTaskToLs() {
+        let newTaskValue = document.querySelector('#taskInput').value;
+        arrayOfTask.push(newTaskValue);
+        let myJasonArrayOfTask = JSON.stringify(arrayOfTask);
+        localStorage.setItem('myJasonArrayOfTask', myJasonArrayOfTask);
+
+        console.log(`addTaskToLs test arrayOfTask =  ${arrayOfTask}`);
+      }
+
+      function showTasksToLs() {
+        order.innerHTML = '';
+        arrayOfTask.forEach((task) => {
+          order.innerHTML += `<li> ${task}</li>`;
+        });
+      }
+
+      function clearTasksFromLs() {
+        localStorage.removeItem('myJasonArrayOfTask');
+        order.innerHTML = '';
+        arrayOfTask.splice(0, arrayOfTask.length);
+      }
+      // else{}
+
+      // function addTaskToLs() {
+      //   const newTaskValue = document.querySelector('#taskInput').value;
+      //   arrayOfTasks.push(newTaskValue);
+      //   localStorage.setItem('arrayOfTasks', JSON.stringify(arrayOfTasks));
+      // }
+
+      // function showTasksToLs() {
+      //   const arrayInJason = localStorage.getItem('arrayOfTasks');
+      //   const array = JSON.parse(arrayInJason);
+      //   console.log(array);
+      // }
+    </script>
+  </body>
+</html>
