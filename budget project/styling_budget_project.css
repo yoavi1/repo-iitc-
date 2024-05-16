@@ -1,0 +1,352 @@
+@import url(reset.css);
+
+/*.container_header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}*/
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+.container_general_data h3 {
+  font-size: 0.9em;
+}
+h4 {
+  color: white;
+  font-weight: 250;
+  font-size: 1.2rem;
+}
+h1,
+.container_general_data h3 {
+  color: #f0f0f0;
+  font-weight: 350;
+}
+
+.container_general_data {
+  background: url('img-budget.jpeg.jpg') no-repeat;
+  width: 100%;
+
+  background-size: cover;
+  object-fit: fill;
+  /* aspect-ratio: 5/1; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+
+.date-balance-income-outcome-section {
+  width: 35%;
+  margin: 1rem 0;
+  /* max-width: 10em;
+  height: 14em; */
+  min-height: 220px;
+  /* height: 220px; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+.date-balance-income-outcome-section h2,
+p {
+  color: rgb(58, 57, 57);
+  font-size: 1em;
+  font-weight: 550;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.date-balance-income-outcome-section p {
+  padding-right: 8px;
+}
+
+#balance {
+  font-size: 46px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+/*.containerIncomeOutcome {
+  border-bottom: 20px;
+}*/
+/* container-transactions h2 {
+  font-size: 1.1em;
+} */
+
+.container_income,
+.container_expenses {
+  /* max-width: 100%; */
+  width: 100%;
+  max-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+.container_income {
+  background-color: hsl(177, 53%, 42%);
+}
+.container_income p {
+  color: white;
+  font-size: 1.1em;
+  margin-right: 32px;
+}
+
+.right-total-income-section {
+  display: flex;
+  align-items: center;
+}
+.container_expenses {
+  background-color: #f53237;
+}
+.container_expenses p {
+  color: white;
+  font-size: 1.1em;
+}
+#expnesesPercentage {
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 0.8rem;
+  background-color: rgb(248, 99, 99);
+  margin-right: 6px;
+}
+.container_data_entry {
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+
+#description {
+  width: 100%;
+  /* font-size: 0.5em; */
+}
+#mount {
+  width: 100%;
+  /* font-size: 0.5em; */
+}
+
+/* .description_feed {
+  width: 30%;
+} */
+
+.container-display-transactions {
+  display: flex;
+  justify-content: center;
+}
+
+.container_detailed_data {
+  width: 76%;
+  /* margin-inline: 10px; */
+  gap: 30px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.income_data {
+  width: 50%;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+.income_data h3 {
+  color: hsl(177, 53%, 42%);
+}
+.expenses_data h3 {
+  color: #f53237;
+}
+.incomes-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.income-right {
+  display: flex;
+  gap: 12px;
+}
+.income-right p {
+  color: hsl(177, 53%, 42%);
+}
+.expenses_data {
+  width: 50%;
+  font-weight: lighter;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',  sans-serif;
+}
+.income-items .expense-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item,
+.income-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+.expense-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #f53237;
+}
+.expense-right p {
+  color: #f53237;
+}
+
+/* 
+
+ul {
+  max-width: 400px;
+}
+
+li {
+  display: flex;
+  gap: 30px;
+  max-width: 340px;
+} */
+
+.income-mode {
+  border: 2px solid hsl(177, 53%, 42%);
+  /* Border color for income mode */
+}
+
+.expense-mode {
+  border: 2px solid #f53237;
+}
+/* Border color for expense mode */
+
+#submitInputButton.income-mode {
+  color: hsl(177, 53%, 42%);
+  /* Submit icon color for income mode */
+  border: none;
+}
+
+#submitInputButton.expense-mode {
+  color: #f53237;
+  border: none;
+}
+
+.income-mode {
+  border: 2px solid hsl(177, 53%, 42%);
+}
+
+.expense-mode {
+  border: 2px solid #f53237;
+}
+
+.income-mode .input-field {
+  color: hsl(177, 53%, 42%);
+}
+
+.expense-mode .input-field {
+  color: #f53237;
+}
+/* Submit icon color for expense mode */
+
+/* .removeBtn {
+  display: none; */
+/* background-color: aqua; */
+/* display: none; */
+/* color: white;
+  transition: all 0.3s;
+} */
+/* 
+
+
+.removeBtn:hover {
+  
+  color: black;
+  cursor: pointer;
+}
+
+.visible {
+  display: block;
+  color: black;
+}
+.expense-items:hover,
+.income-items:hover{
+  display: block;
+} */
+
+.removeBtn {
+  display: none;
+  transition: all 0.3s;
+}
+
+.expense-item:hover .removeBtn,
+.income-item:hover .removeBtn {
+  display: inline-block;
+  /* transition: all 0.3s; */
+}
+.income-transaction {
+  transition: transform 0.3s ease;
+}
+.percentage {
+  transition: transform 0.3s ease;
+}
+.expense-item:hover .percentage,
+.expense-item:hover .income-transaction,
+.income-item:hover .income-transaction {
+  /* transform translteX(); */
+  transform: translateX(-10px);
+}
+
+@media only screen and (max-width: 566px) {
+  .container_data_entry {
+    flex-direction: column;
+  }
+  .right-total-income-section {
+    flex-direction: column;
+  }
+  .container_detailed_data {
+    flex-direction: column;
+  }
+  .expense-item,
+  .income-item {
+    flex-direction: column;
+    font-size: 18px;
+  }
+  .container_income {
+    flex-direction: column;
+    max-height: none;
+  }
+  .container_expenses {
+    flex-direction: column;
+    max-height: none;
+  }
+}
+
+.red-squre p {
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 0.7rem;
+
+  background-color: #f9cdcd;
+}

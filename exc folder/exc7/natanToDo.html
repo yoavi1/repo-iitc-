@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+      </head>
+      <body>
+        <label for="inputTodo">Insert Todo</label>
+        <input type="text" id="inputTodo" />
+        <br />
+        <button onclick="addTodo()">Add todo</button>
+        <br />
+        <button onclick="sortTodos()">Sort todos</button>
+        <button onclick="showTodos()">Show todos</button>
+        <div id="todos"></div>
+        <script>
+          let todos;
+          let elemInput = document.querySelector('input');
+          let elemTodos = document.querySelector('#todos');
+          const KEY = 'key-todos';
+
+          if (localStorage.getItem(KEY) == null) {
+            todos = [];
+          } else {
+            const todosFromLocalStorage = localStorage.getItem(KEY);
+            todos = JSON.parse(todosFromLocalStorage);
+          }
+
+          function saveToLocalStorage() {
+            const todosJson = JSON.stringify(todos);
+            localStorage.setItem(KEY, todosJson);
+          }
+
+          function addTodo() {
+            // --- add only if not exist
+            if (!todos.find((todo) => todo == elemInput.value)) {
+              todos.push(elemInput.value);
+              saveToLocalStorage();
+              showTodos();
+            }
+          }
+
+          function sortTodos() {
+            todos.sort();
+            showTodos();
+          }
+
+          function showTodos() {
+            elemTodos.innerHTML = '';
+            for (let index = 0; index < todos.length; index++) {
+              const todo = todos[index];
+              elemTodos.innerHTML += `<p onclick=todoDeleteHandler(this)>${todo}</p>`;
+            }
+          }
+
+          function todoDeleteHandler(elem) {
+            const todoToDelete = elem.innerText;
+            const index = todos.indexOf(todoToDelete);
+            if (index != -1) {
+              todos.splice(index, 1); // delete from array
+              saveToLocalStorage();
+              showTodos();
+            }
+          }
+        </script>
+      </body>
+    </html>
+  </body>
+</html>

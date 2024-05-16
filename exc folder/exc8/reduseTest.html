@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const arrayOfStrings = ['Hello', ' ', 'world', '!'];
+      //   const arrayOfStrings = [1, 2, 3, 4];
+
+      //   const result = arrayOfStrings.reduce((accumulator, currentValue) => {
+      //     return accumulator + currentValue;
+      //   });
+
+      const arrayNumbers = [1, 2, 3, 4];
+
+      let result = arrayNumbers.reduce((accumulator, currentValue) => {
+        if (currentValue % 2 == 0) {
+          return ++accumulator;
+        } else {
+          return accumulator;
+        }
+      }, 0);
+
+      console.log(result); // Output: 'Hello world!'
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styling_budget_project.css" />
+  </head>
+
+  <body>
+    <div class="container_header"></div>
+
+    <div class="container_general_data">
+      <div class="date-balance-income-outcome-section">
+        <div><h4>Available Budget In</h4></div>
+        <h1 id="balance"></h1>
+        <div class="container_income container-transactions">
+          <h2>INCOME</h2>
+          <p id="total-income"></p>
+        </div>
+        <div class="container_expenses container-transactions">
+          <h2>EXPENSES</h2>
+          <div class="right-total-income-section">
+            <p id="total-expense"></p>
+            <p id="expnesesPercentage"></p>
+          </div>
+        </div>
+      </div>
+      <div class="gen_income"></div>
+      <div class="gen_expenses"></div>
+    </div>
+
+    <div class="container_data_entry">
+      <div class="plus_minus">
+        <select id="type">
+          <option value="income">+</option>
+          <option value="expense">-</option>
+        </select>
+      </div>
+      <div class="description_feed">
+        <input type="text" id="description" placeholder="add description" />
+      </div>
+      <div class="value_feed">
+        <input type="text" id="amount" placeholder="value" />
+      </div>
+      <i id="submitInputButton" class="fa-regular fa-circle-check"></i>
+    </div>
+
+    <div class="container-display-transactions">
+      <div class="container_detailed_data">
+        <div class="income_data">
+          <h3>INCOME</h3>
+          <div class="income-items"></div>
+        </div>
+        <div class="expenses_data">
+          <h3>EXPENSES</h3>
+          <div class="expense-items"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="myscripts.js"></script>
+  </body>
+</html>

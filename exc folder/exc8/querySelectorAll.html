@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <span>1</span>
+      <span>3</span>
+      <span>5</span>
+    </div>
+    <script>
+      const spans = document.querySelectorAll('div span');
+
+      spans.forEach((item) => {
+        item.addEventListener('click', function (event) {
+          console.log('hey');
+          console.log(event.target);
+        });
+      });
+
+      //   spans.forEach((item) => {
+      //     item.addEventListener('click', function () {
+      //       console.log(item.innerText);
+      //     });
+      //   });
+
+      //   target event
+      //   console.log(Array.from(spans));
+    </script>
+  </body>
+</html>

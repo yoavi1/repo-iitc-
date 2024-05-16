@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div></div>
+    <script>
+      let startTime;
+      let endTime;
+      let allTime;
+
+      const elemDiv = document.querySelector('div');
+      elemDiv.addEventListener('mousedown', function () {
+        startTime = Date.now();
+        console.log(startTime);
+      });
+      elemDiv.addEventListener('mouseup', function () {
+        endTime = Date.now();
+        console.log(endTime);
+        allTime = (endTime - startTime) / 1000;
+        console.log(allTime);
+      });
+    </script>
+  </body>
+</html>

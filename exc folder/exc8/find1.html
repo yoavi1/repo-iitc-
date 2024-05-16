@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let array1 = [1, 3, 5, -2, 7];
+      function findNuberInArray(number) {
+        const isUndifine = array1.find((item) => {
+          return item == number;
+        });
+        return isUndifine == undefined ? 'no' : 'yes';
+      }
+      console.log(findNuberInArray(5));
+      console.log(findNuberInArray(99));
+      console.log(findNuberInArray(-2));
+      console.log(findNuberInArray(444));
+    </script>
+  </body>
+</html>
